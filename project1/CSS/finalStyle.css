@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@700&family=Open+Sans:wght@300&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 2rem;
+    background-color: black;
+
+}
+
+.nav {
+    color: rgb(102, 102, 102);
+    text-align: center;
+    font-family: "Gabarito";
+    font-size: 30px;
+
+    list-style: none;
+    margin: -33px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.nav a {
+    display: block;
+    background: rgb(37, 37, 37);
+    padding: 20px;
+    color: rgb(102, 102, 102);
+    transition: transform 0.1s ease-in, background-color 0.5s linear;
+}
+
+.nav li {
+    width: 25%;
+}
+
+.nav a:hover {
+    background: rgb(43, 43, 43);
+    color: rgb(246, 195, 101);
+    transform: scale(1.1);
+}
+
+header {
+    position: relative;
+}
+
+
+#name {
+    position: absolute;
+    left: -20px;
+    background-color: #7FC6A6;
+    color: rgb(255, 255, 255);
+    width: 32rem;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Gabarito";
+    position: absolute;
+    top: -60px;
+
+}
+
+#subheading {
+    background-color: #4E8971;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 23rem;
+    margin-left: 10rem;
+    text-align: center;
+    font-family: "Open Sans";
+    position: absolute;
+    top: 76px;
+
+}
+
+#title {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: "Gabarito";
+
+}
+
+h3 {
+    font-size: 30px;
+    font-family: "Gabarito";
+}
+
+#top {
+    color: white;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+}
+
+#bot {
+    color: #7FC6A6;
+    position: absolute;
+    top: 650px;
+    left: 20px;
+
+}
+
+.box {
+    width: 15px;
+    height: 7000px;
+    background-color: rgb(246, 195, 101);
+    position: absolute;
+    left: 160px;
+    top: 860px;
+}
+
+main h2 {
+    color: #7FC6A6;
+}
+
+main {
+    margin-left: 10rem;
+}
+
+
+div#all {
+
+    display: grid;
+    grid-template-rows: 70px 2fr 300px auto;
+    grid-template-columns: auto;
+    grid-template-areas: "nav" "header" "." "main";
+
+}
+
+div#mainWrap {
+    display: grid;
+    grid-template-rows: auto 200px auto 200px auto;
+    grid-template-columns: 3fr 1fr 200px;
+    grid-template-areas:
+        "projects projects ."
+        ". . ."
+        "about  boxes . "
+        ". . . "
+        "contact contact .";
+}
+
+ul.nav {
+    grid-area: nav;
+}
+
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+#projects {
+    color: rgb(157, 157, 157);
+    font-family: "Open Sans";
+    font-size: 20px;
+
+    grid-area: projects;
+}
+
+#gamePics {
+    display: grid;
+    grid-template-columns: auto 20px 1fr;
+    grid-template-rows: 200px 200px 190px 200px;
+    grid-template-areas:
+        "game . front"
+        "game . back"
+        "game . left "
+        "game . right";
+
+}
+
+#front,
+#back,
+#left,
+#right {
+    width: 200px;
+}
+
+#front {
+    grid-area: front;
+}
+
+#game {
+    grid-area: game;
+}
+
+#back {
+    grid-area: back;
+}
+
+#left {
+    grid-area: left;
+}
+
+#right {
+    grid-area: right;
+}
+
+#data1,
+#data2,
+#data3 {
+    width: 100%;
+}
+
+
+#about {
+    color: rgb(157, 157, 157);
+    font-family: "Open Sans";
+    font-size: 20px;
+
+    grid-area: about;
+    margin-right: 2rem
+}
+
+#contact {
+    color: rgb(157, 157, 157);
+    font-family: "Open Sans";
+    font-size: 20px;
+
+    grid-area: contact;
+}
+
+#boxes {
+    grid-area: boxes;
+    font-family: "Open Sans";
+    font-size: 40px;
+    text-align: center;
+
+    margin-top: 100px;
+
+}
+
+#box1 {
+    color: white;
+    background-color: #4E8971;
+
+}
+
+#box2 {
+    background-color: #7FC6A6;
+}
+
+@media screen and (max-width: 1050px) {
+    div#mainWrap {
+
+        grid-template-columns: 3fr 1fr 100px;
+
+    }
+
+    .box {
+        top: 920px;
+        left: 100px
+    }
+
+    main {
+        margin-left: 6rem;
+    }
+
+
+}
+
+@media screen and (max-width:1160px) {
+    #gamePics {
+        grid-template-rows: auto 10px 20px 150px;
+        grid-template-columns: 150px 150px 150px 150px;
+        grid-template-areas:
+            "game game game game"
+            ". . . . "
+            "front back left  right"
+            ". . . . ";
+
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    div#mainWrap {
+        grid-template-rows: 2fr 200px 500px 400px 200px auto;
+        grid-template-columns: auto;
+        grid-template-areas: "projects" "." "about" "boxes" "." "contact";
+
+    }
+
+    main {
+        margin-left: 0rem;
+    }
+
+    .box {
+        width: 0px;
+
+    }
+
+    #gamePics {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto 50px 200px 200px;
+        grid-template-areas: "game game" ". ." "front back" "left right"
+
+    }
+
+    #game {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .nav {
+        font-size: 20px;
+    }
+
+    #top {
+
+        bottom: -30px;
+        left: 20px;
+    }
+
+    #bot {
+
+        top: 660px;
+        left: 20px;
+
+    }
+
+    #name {
+        width: 20rem;
+        font-size: 50px;
+
+    }
+
+    #subheading {
+
+
+        font-size: 17px;
+        width: 20rem;
+        margin-left: 4rem;
+        top: 23px;
+
+    }
+
+}
+
+
+
+main a:link {
+    color: #7FC6A6;
+}
+
+main a:visited {
+    color: #4E8971;
+}
+
+main a:hover {
+    color: rgb(246, 195, 101);
+}
+
+main a:active {
+    color: #7FC6A6;
+}

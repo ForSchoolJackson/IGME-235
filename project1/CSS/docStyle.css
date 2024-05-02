@@ -1,0 +1,38 @@
+img {
+   
+    width: 80%;
+    height: auto;
+}
+
+body {
+    margin: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 4fr 4fr 4fr;
+    grid-template-areas: "links" "pic1" "pic2" "pic3";
+
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        grid-template-rows: auto 2fr;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-areas: "links links links"
+                             "pic1 pic2 pic3";
+    }
+}
+
+ #links {
+    grid-area: links;
+}
+
+ #image1 {
+    grid-area: pic1;
+}
+
+ #image2 {
+    grid-area: pic2;
+}
+
+ #image3 {
+    grid-area: pic3;
+}
